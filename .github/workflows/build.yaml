@@ -22,8 +22,8 @@ jobs:
       - name: Build elpa
         uses: melpa/package-build@f19a7f58cf4b2e573a6d551d8d3dbe265c2566b4 # v5
         env:
-          ELPA_NAME: MyElpa
-          ELPA_STEM: myelpa
+          ELPA_NAME: TomoElpa
+          ELPA_STEM: tomoelpa
           ELPA_URL: ${{ github.event.repository.homepage }}
           REPO_URL: ${{ github.event.repository.html_url }}
           WIKI_URL: ${{ github.event.repository.html_url }}/wiki
