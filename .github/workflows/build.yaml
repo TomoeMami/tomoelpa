@@ -1,5 +1,7 @@
 name: Build elpa
 on:
+  schedule:
+    - cron: '20 2 1,8,15,23 * *'
   push:
     branches: main
   workflow_dispatch:
