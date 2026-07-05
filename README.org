@@ -3,12 +3,6 @@
 
 https://tomoemami.github.io/tomoelpa/
 
-Packages included:
-
-1. [[https://github.com/TomoeMami/org-smart-get-chn-time.el][智能识别org-heading里的中文时间戳]]
-2. [[https://github.com/TomoeMami/dida][在 Emacs 中与滴答清单(Dida365)同步]]
-3. [[https://github.com/TomoeMami/bangumi.el][Emacs Org-mode 与 bangumi.tv / bgm.tv 联动工具]]
-
 ** About MyELPA
 MyELPA allows anyone to easily and quickly publish their own ELPA.
 
