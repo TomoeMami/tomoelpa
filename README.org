@@ -4,7 +4,8 @@
 https://tomoemami.github.io/tomoelpa/
 * Reminder
 
-ghostel is https://github.com/kiennq/ghostel
+- ghostel is https://github.com/kiennq/ghostel
+- tramp-rpc sticked to rev "fab479d0f29b20045f372a5534a99da56b6c0e07"
 
 ** About MyELPA
 MyELPA allows anyone to easily and quickly publish their own ELPA.
