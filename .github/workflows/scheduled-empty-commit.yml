@@ -1,0 +1,33 @@
+name: Scheduled empty commit
+
+on:
+  schedule:
+    # 每天 UTC 00:00 触发（北京时间 08:00）
+    # 你可以根据需要修改 cron 表达式
+    - cron: '22 22 * * *'
+  workflow_dispatch:
+jobs:
+  empty-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 必须授予写入权限，否则无法 push
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # 默认使用 GITHUB_TOKEN，权限由上面的 permissions 控制
+
+      - name: Configure Git bot identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Pull latest changes (avoid conflicts)
+        run: git pull --rebase origin main
+
+      - name: Create empty commit
+        run: |
+          git commit --allow-empty -m "chore: trigger rebuild via scheduled empty commit"
+
+      - name: Push to main
+        run: git push origin main
