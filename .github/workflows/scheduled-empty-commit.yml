@@ -10,17 +10,20 @@ jobs:
   empty-commit:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # 必须授予写入权限，否则无法 push
+      contents: write   # 授予 GITHUB_TOKEN 基本写入权限，但实际推送会使用 PAT
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        # 默认使用 GITHUB_TOKEN，权限由上面的 permissions 控制
+        with:
+          # 使用 PAT 而不是默认的 GITHUB_TOKEN
+          token: ${{ secrets.PAT_TOKEN }}
+          persist-credentials: false   # 让后续 git 命令使用 PAT
 
       - name: Configure Git bot identity
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Pull latest changes (avoid conflicts)
         run: git pull --rebase origin main
@@ -30,4 +33,5 @@ jobs:
           git commit --allow-empty -m "chore: trigger rebuild via scheduled empty commit"
 
       - name: Push to main
+        # 使用 PAT 进行推送，推送会触发新的 push 事件
         run: git push origin main
