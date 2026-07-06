@@ -1,0 +1,1 @@
+(advance-words-count :fetcher github :repo "LdBeth/advance-words-count.el")
