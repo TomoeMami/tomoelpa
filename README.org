@@ -2,6 +2,9 @@
 #+OPTIONS: toc:nil
 
 https://tomoemami.github.io/tomoelpa/
+* Reminder
+
+ghostel is https://github.com/kiennq/ghostel
 
 ** About MyELPA
 MyELPA allows anyone to easily and quickly publish their own ELPA.
