@@ -1,0 +1,1 @@
+(persistent-cached-load-filter :fetcher github :repo "include-yy/persistent-cached-load-filter")
