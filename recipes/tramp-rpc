@@ -1,1 +1,0 @@
-(tramp-rpc :fetcher github :repo "ArthurHeymans/emacs-tramp-rpc" :commit "fab479d0f29b20045f372a5534a99da56b6c0e07")
