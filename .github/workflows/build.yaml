@@ -13,11 +13,11 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           persist-credentials: false
-      # - name: Cache sources
-      #   uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
-      #   with:
-      #     key: sources
-      #     path: sources
+      - name: Cache sources
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          key: sources
+          path: sources
       - name: Build elpa
         uses: melpa/package-build@f19a7f58cf4b2e573a6d551d8d3dbe265c2566b4 # v5
         env:
