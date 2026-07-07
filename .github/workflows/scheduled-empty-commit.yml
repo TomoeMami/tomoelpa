@@ -4,7 +4,7 @@ on:
   schedule:
     # 每天 UTC 00:00 触发（北京时间 08:00）
     # 你可以根据需要修改 cron 表达式
-    - cron: '22 22 * * *'
+    - cron: '22 18 * * *'
   workflow_dispatch:
 jobs:
   empty-commit:
