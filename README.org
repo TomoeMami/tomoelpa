@@ -4,7 +4,7 @@
 https://tomoemami.github.io/tomoelpa/
 * Reminder
 
-- ghostel is https://github.com/kiennq/ghostel
+nil
 
 ** About MyELPA
 MyELPA allows anyone to easily and quickly publish their own ELPA.
