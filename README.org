@@ -4,7 +4,7 @@
 https://tomoemami.github.io/tomoelpa/
 * Reminder
 
-nil
+org-table-widget为我个人修改的版本：https://github.com/TomoeMami/org-table-widget
 
 ** About MyELPA
 MyELPA allows anyone to easily and quickly publish their own ELPA.
